@@ -28,6 +28,16 @@ function drawDot(x, y) {
         imageData[y * imageWidth + x] = true;
     }
 }
+function drawHorizontalLine(x, y, length) {
+    for (let i = 0; i < length; i++) {
+        drawDot(x + i, y);
+    }
+}
+function drawVerticalLine(x, y, length) {
+    for (let i = 0; i < length; i++) {
+        drawDot(x, y + i);
+    }
+}
 /**
  * Gets if the provided point is in the image.
  * @param x - The horizontal position within
