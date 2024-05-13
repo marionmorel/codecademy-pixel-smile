@@ -10,7 +10,7 @@ drawDot(12, 2);
 // smile
 drawDot(4, 4);
 drawHorizontalLine(4, 5, 12);
-drawDot(15, "4");
+drawDot(15, 4);
 // output what we drew to the console
 outputImage();
 function drawRectangle(x, y, width, height) {
@@ -22,6 +22,11 @@ function drawRectangle(x, y, width, height) {
     drawVerticalLine(x, y, height);
     // right
     drawVerticalLine(x + width - 1, y, height);
+}
+function drawDot(x, y) {
+    if (isPointInImage(x, y)) {
+        imageData[y * imageWidth + x] = true;
+    }
 }
 /**
  * Gets if the provided point is in the image.
